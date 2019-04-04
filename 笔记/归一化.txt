@@ -1,0 +1,25 @@
+OpenCv中提供了四种归一化方法
+
+NORM_MINMAX：
+	依据是最大值减去最小值(max-min)，然后每个像素点除以这个差。但是注意对于最	小值与最大值所在的像素点归一化后分别为0个1
+
+
+NORM_INF：
+	依据是最大值，即把每一个像素点除以它的最大值。
+
+NORM_L1：
+	L1归一化，依据是和为1。即先求出所有像素的总和，然后把每一个像素除以总值
+
+NORM_L2：
+	L2归一化，依据是单位向量为1.即先求出整个矩阵的模，然后把每一个像素值除以这	个模的值
+
+
+normalize(
+	inputArray src, //输入图像
+	InputOutputArray, //输出图像
+	double alpha = 1, //NORM_MINMAX时候低值 （这里1是小，0是大？大小关系有点疑问）
+	double beta = 0, //NORM_MINMAX时候高值
+	int norm_type = NORM_L2, //只有alpha
+	int dtype = -1, //默认类型与src一致
+	InputArray mask = noArray()  //mask默认为空
+)

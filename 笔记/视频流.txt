@@ -1,0 +1,3 @@
+对于视频保存：
+	mp4格式：CV_FOURCC('D','I','V','X')
+	avi格式：CV_FOUrCC('M','J','P','G')
